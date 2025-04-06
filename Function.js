@@ -43,3 +43,25 @@ let Person={
     }
 }
 document.write(Person.greet() + "<br>");
+function test(username, func) {
+    console.log(username); // Logs the username
+    func();                // Calls the callback function
+}
+
+let values = function() {
+    console.log("Callback");
+}
+
+test("Mihir", values); // Call the function with "Mihir" and the callback
+function Parent() //clousure function
+{
+    let count=0;
+    return function child()
+    {
+        count++;
+        console.log(count)
+}
+}
+const check=Parent();
+check();
+   
