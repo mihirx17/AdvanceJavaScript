@@ -63,5 +63,5 @@ function Parent() //clousure function
 }
 }
 const check=Parent();
-check();
+check();//clousure function
    
