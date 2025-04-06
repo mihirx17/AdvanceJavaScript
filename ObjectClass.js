@@ -1,20 +1,45 @@
-class Student{
-    constructor(name, age) {
-        this.name = name;
-        this.age = age;
+// ✅ Class with Direct Properties and Method
+class Student {
+    name = "Mihir";
+    age = 23;
+    company = "LTIMindtree";
+  
+    userInfo() {
+      console.log(`Name: ${this.name}, Age: ${this.age}, Company: ${this.company}`);
     }
-    getName() {
-        return this.name;
+  }
+  
+  let student1 = new Student();
+  student1.userInfo();
+  
+  document.write("<br>");
+  
+  // ✅ Constructor Example
+  class Employee {
+    constructor() {
+      document.write("Constructor called<br>");
     }
-    getAge() {
-        return this.age;
+  }
+  let emp1 = new Employee();
+  
+  // ❌ INVALID: Multiple constructors (this will throw error)
+  class User {
+    // ❌ You CANNOT define multiple constructors in JavaScript
+    // ✅ You must use default values or conditional logic instead
+    constructor(name, age, company = "LTIMindtree") {
+      this.name = name;
+      this.age = age;
+      this.company = company;
     }
-}
-let student1 = new Student("John", 20);
-document.write(student1.getName() + "<br>");
-//Constructor
-class Person {
-    constructor(){
-    document.write("Constructor called");
+  
+    showInfo() {
+      document.write(`Name: ${this.name}, Age: ${this.age}, Company: ${this.company}<br>`);
     }
-}
+  }
+  
+  let obj = new User("Mihir", 23);
+  let obj1 = new User("Mihir", 23, "Deloitte");
+  
+  obj.showInfo();
+  obj1.showInfo();
+  
