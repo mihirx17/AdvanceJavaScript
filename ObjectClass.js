@@ -42,5 +42,17 @@ class Student {
   
   obj.showInfo();
   obj1.showInfo();
-  
+  class test{
+    mymethod(name){
+        console.log(`Parent class method called ${name} `)   
+  }
+  mymethod(name,age){
+    console.log(`Parent class method called ${name} ${age}`);   
+  }
+}
+
+  //method overriding is not possible in js
+    // but we can use this method in js
+  //constructor overloading is not possible in js  
+
   
